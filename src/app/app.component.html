@@ -1,3 +1,36 @@
-<h1>
-  {{title}}
-</h1>
+<div [class.dark-theme]="isDarkTheme">
+  <md-toolbar color="primary">
+    <span>
+      <md-icon class="icon-20">pets</md-icon>
+      Аверс
+    </span>
+    <button md-icon-button [md-menu-trigger-for]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+  </md-toolbar>
+
+  <md-menu x-position="before" #menu="mdMenu">
+    <button md-menu-item>Help</button>
+  </md-menu>
+
+  <md-sidenav-layout>
+    <md-tab-group>
+      <md-tab label="Новые поступления">
+        <md-list>
+          <md-list-item *ngFor="let catalog of items">
+            <img md-list-avatar src="{{catalog.image_src}}" alt="{{catalog.name}}">
+            <h3 md-line> {{catalog.name}} </h3>
+            <p md-line>
+              <span> {{catalog.year}} </span>
+              <span class="demo-2"> -- {{catalog.special}} </span>
+            </p>
+
+          </md-list-item>
+
+        </md-list>
+      </md-tab>
+    </md-tab-group>
+  </md-sidenav-layout>
+
+</div>
+
