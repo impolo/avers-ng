@@ -15,11 +15,10 @@
       "main": "main.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "fa",
+      "prefix": "av",
       "mobile": false,
       "styles": [
-        "styles.css",
-        "leashed-theme.scss"
+        "styles.css"
       ],
       "scripts": [],
       "environments": {
