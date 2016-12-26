@@ -1,0 +1,11 @@
+<form [formGroup]="searchForm">
+  <span class="spinner spinner-sm" *ngIf=visible></span>
+    <md-input-container>
+      <input md-input
+             id="searchByName"
+             [placeholder]="placeholder"
+             formControlName="searchStr">
+
+    </md-input-container>
+
+</form>

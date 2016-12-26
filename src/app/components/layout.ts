@@ -1,24 +1,33 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 
 @Component({
   selector: 'av-layout',
   template: `
-    <md-sidenav-layout fullscreen>
-      
-      <ng-content></ng-content>
+<div class="main-container">
+ 
+    <header class="header header-6">
+      <div class="branding">
+         <span class="title">Аверс</span>
+      </div>
+    </header> 
+    
 
-    </md-sidenav-layout>
+
+    <div class="content-container">
+        <div class="content-area">
+            <ng-content></ng-content>
+        </div>   
+  
+    </div>
+    
+
+    
+</div>
   `,
   styles: [`
-    md-sidenav-layout {
-      background: rgba(0, 0, 0, 0.03);
-    }
-    
-    *, /deep/ * {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+
   `]
 })
-export class LayoutComponent { }
+export class LayoutComponent {
+}

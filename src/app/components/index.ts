@@ -6,10 +6,12 @@ import { RouterModule } from '@angular/router';
 
 import { LayoutComponent } from './layout';
 import { ToolbarComponent } from './toolbar';
+import {InputDebounceComponent} from "./inputDebounce";
 
 export const COMPONENTS = [
   LayoutComponent,
-  ToolbarComponent
+  ToolbarComponent,
+  InputDebounceComponent
 ];
 
 

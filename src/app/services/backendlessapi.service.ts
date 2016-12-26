@@ -19,5 +19,14 @@ export class BackendlessapiService {
       .map((response: Response) => response.json())
   }
 
+  searchByName(str) {
+    let headers = new Headers()
+    headers.append("application-id", BackEndlessSetup.APP_ID)
+    headers.append("secret-key", BackEndlessSetup.REST_KEY)
+    headers.append("application-type", "REST")
+    let options = new RequestOptions({headers: headers});
+    return this.http.get(BackEndlessSetup.DATA_URL + "Catalog?where=name%20LIKE%20%27%25" + str + "%25%27", options)
+      .map((response: Response) => response.json())
+  }
 
 }

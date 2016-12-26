@@ -10,11 +10,14 @@ import {RouterModule} from "@angular/router";
 import {NotFoundPageComponent} from "./containers/not-found-page";
 import {CoinListComponent} from "./containers/coin_list";
 import {CoinComponent} from "./components/coin";
+import { SearchComponent } from './containers/search.component';
+import { ClarityModule } from 'clarity-angular';
 
 @NgModule({
   imports: [
     BrowserModule,
     ComponentsModule,
+    ClarityModule.forChild(),
     MaterialModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
@@ -22,7 +25,8 @@ import {CoinComponent} from "./components/coin";
     AppComponent,
     CoinComponent,
     NotFoundPageComponent,
-    CoinListComponent
+    CoinListComponent,
+    SearchComponent
   ],
   bootstrap: [AppComponent],
 })

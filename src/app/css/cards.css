@@ -4,12 +4,14 @@ md-card-content {
   justify-content: center;
 }
 
-md-input {
-  width: 300px;
-}
 
 md-card {
   margin: 15px;
+}
+
+md-card-image {
+  max-height: 150px;
+  max-width: 150px;
 }
 
 md-card-spinner {
